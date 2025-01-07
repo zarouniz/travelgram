@@ -56,7 +56,7 @@ nav ul li:last-child img {
     display: none;
   }
   .icon-lupa {
-    position: relative;
+    position: absolute;
     top: 15px; /* Ajuste a posição vertical conforme necessário */
     right: 40px; /* Ajuste a posição horizontal para o canto direito */
     z-index: 9999; /* Garante que a imagem fique acima de outros elementos */
