@@ -1,9 +1,39 @@
-footer{
+footer {
   display: flex;
   padding-block: 24px;
   gap: 24px;
-  font: var(--font-sm);
+  font: var(--text-sm); /* Corrigido para usar o nome correto da variável */
 }
+
 footer span:nth-child(1) {
   margin-right: auto;
+}
+
+/* Estilo responsivo para dispositivos menores */
+@media (max-width: 768px) {
+  footer {
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    gap: 16px; /* Reduz o espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens */
+  }
+
+  footer span:nth-child(1) {
+    margin-right: 0; /* Remove o espaço adicional em layouts menores */
+    text-align: center; /* Centraliza o texto do primeiro item */
+    width: 100%; /* O primeiro item ocupa toda a largura disponível */
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    flex-direction: column; /* Os itens ficam empilhados verticalmente */
+    align-items: center; /* Centraliza os itens no eixo vertical */
+    gap: 12px; /* Espaçamento menor para telas muito pequenas */
+    padding-block: 16px; /* Reduz o padding vertical */
+  }
+
+  footer span:nth-child(1) {
+    text-align: center; /* Continua centralizado */
+    width: auto; /* Ajusta automaticamente ao conteúdo */
+  }
 }

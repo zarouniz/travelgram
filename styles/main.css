@@ -4,8 +4,36 @@ main {
   gap: 24px;
   padding-block: 24px;
 }
-main img{
+
+main img {
   width: 286px;
   height: 286px;
   object-fit: cover;
+}
+
+/* Estilo responsivo para dispositivos móveis */
+@media (max-width: 768px) {
+  main {
+    gap: 16px; /* Reduz o espaçamento entre os elementos */
+    padding-block: 16px; /* Reduz o padding vertical */
+  }
+
+  main img {
+    width: 200px; /* Imagens menores para dispositivos médios */
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    flex-direction: column; /* Alinha os elementos em uma única coluna */
+    align-items: center; /* Centraliza os elementos na coluna */
+    gap: 12px; /* Reduz ainda mais o espaçamento */
+  }
+
+  main img {
+    width: 100%; /* Imagens ocupam 100% da largura do contêiner */
+    height: auto; /* Ajusta a altura proporcionalmente */
+    max-width: 300px; /* Limita o tamanho máximo da imagem */
+  }
 }

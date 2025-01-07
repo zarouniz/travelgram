@@ -1,3 +1,4 @@
+/* Estilo principal */
 nav {
   display: flex;
   justify-content: space-between;
@@ -5,17 +6,62 @@ nav {
   line-height: 0;
   padding-block: 20px;
 }
+
 nav ul {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 24px;
   padding-block: 8px;
-  
-
 }
+
 nav ul li:last-child img {
   width: 40px;
   height: 40px;
 }
+
+/* Estilo responsivo para dispositivos móveis */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    align-items: center;
+    padding-block: 10px;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  nav ul li:last-child img {
+    width: 32px;
+    height: 32px; /* Ajuste o tamanho do ícone no mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    gap: 8px;
+    padding-block: 4px;
+  }
+
+  nav ul li:last-child img {
+    width: 28px;
+    height: 28px;
+  }
+  .mobileonly {
+    display: none;
+  }
+  .icon-lupa {
+    position: fixed;
+    top: 15px; /* Ajuste a posição vertical conforme necessário */
+    right: 40px; /* Ajuste a posição horizontal para o canto direito */
+    z-index: 9999; /* Garante que a imagem fique acima de outros elementos */
+  }
+  
+}
+
 

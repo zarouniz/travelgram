@@ -1,20 +1,23 @@
 header {
   padding-block: 32px;
   font: var(--text-md);
-
 }
+
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 #profile {
   display: flex;
   gap: 32px;
 }
-#profile > div{
+
+#profile > div {
   max-width: 384px;
 }
+
 #profile h1 {
   font: var(--text-lg);
   color: var(--text-color-primary);
@@ -28,14 +31,63 @@ header .container {
   gap: 16px;
   width: 280px;
 }
+
 #info li {
   display: flex;
   align-items: center;
   gap: 8px;
 }
+
 #profile img {
   width: 176px;
   height: 176px;
   object-fit: cover;
   border-radius: 50%;
+}
+
+/* Estilo responsivo para telas menores */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  #profile {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px; /* Reduz o espaçamento entre a imagem e o conteúdo */
+  }
+
+  #profile > div {
+    max-width: 100%;
+    text-align: center; /* Centraliza o texto */
+  }
+
+  #profile img {
+    width: 140px; /* Ajusta o tamanho da imagem no mobile */
+    height: 140px;
+  }
+
+  #info {
+    width: 100%; /* Ajusta o tamanho do container de informações */
+    align-items: center; /* Centraliza os itens */
+    gap: 12px; /* Reduz o espaçamento entre os itens */
+  }
+}
+
+/* Estilo responsivo para telas muito pequenas */
+@media (max-width: 480px) {
+  header {
+    padding-block: 16px; /* Reduz o padding vertical */
+  }
+
+  #profile img {
+    width: 120px; /* Imagem menor */
+    height: 120px;
+  }
+
+  #info li {
+    gap: 4px; /* Reduz o espaçamento entre os ícones e o texto */
+  }
 }
